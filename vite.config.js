@@ -8,5 +8,10 @@ export default defineConfig({
     port: 7878,
   },
   plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.js',
+  },
   host: true,
 })
